@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Sb6qBmxmwmQ=",
+  "success": true,
+  "projectFilePath": "/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/Api/Api.csproj",
+  "expectedPackageFiles": [
+    "/Users/tomaszbielas/.nuget/packages/microsoft.aspnetcore.openapi/9.0.9/microsoft.aspnetcore.openapi.9.0.9.nupkg.sha512",
+    "/Users/tomaszbielas/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
