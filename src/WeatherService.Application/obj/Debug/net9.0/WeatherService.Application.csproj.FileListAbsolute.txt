@@ -1,0 +1,16 @@
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Application/bin/Debug/net9.0/WeatherService.Application.deps.json
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Application/bin/Debug/net9.0/WeatherService.Application.dll
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Application/bin/Debug/net9.0/WeatherService.Application.pdb
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Application/bin/Debug/net9.0/WeatherService.Domain.dll
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Application/bin/Debug/net9.0/WeatherService.Domain.pdb
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Application/obj/Debug/net9.0/WeatherService.Application.csproj.AssemblyReference.cache
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Application/obj/Debug/net9.0/WeatherService.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Application/obj/Debug/net9.0/WeatherService.Application.AssemblyInfoInputs.cache
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Application/obj/Debug/net9.0/WeatherService.Application.AssemblyInfo.cs
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Application/obj/Debug/net9.0/WeatherService.Application.csproj.CoreCompileInputs.cache
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Application/obj/Debug/net9.0/WeatherService.Application.sourcelink.json
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Application/obj/Debug/net9.0/WeatherS.50F5FEAD.Up2Date
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Application/obj/Debug/net9.0/WeatherService.Application.dll
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Application/obj/Debug/net9.0/refint/WeatherService.Application.dll
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Application/obj/Debug/net9.0/WeatherService.Application.pdb
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Application/obj/Debug/net9.0/ref/WeatherService.Application.dll
