@@ -1,0 +1,12 @@
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Domain/bin/Debug/net9.0/WeatherService.Domain.deps.json
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Domain/bin/Debug/net9.0/WeatherService.Domain.dll
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Domain/bin/Debug/net9.0/WeatherService.Domain.pdb
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Domain/obj/Debug/net9.0/WeatherService.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Domain/obj/Debug/net9.0/WeatherService.Domain.AssemblyInfoInputs.cache
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Domain/obj/Debug/net9.0/WeatherService.Domain.AssemblyInfo.cs
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Domain/obj/Debug/net9.0/WeatherService.Domain.csproj.CoreCompileInputs.cache
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Domain/obj/Debug/net9.0/WeatherService.Domain.sourcelink.json
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Domain/obj/Debug/net9.0/WeatherService.Domain.dll
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Domain/obj/Debug/net9.0/refint/WeatherService.Domain.dll
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Domain/obj/Debug/net9.0/WeatherService.Domain.pdb
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Domain/obj/Debug/net9.0/ref/WeatherService.Domain.dll
