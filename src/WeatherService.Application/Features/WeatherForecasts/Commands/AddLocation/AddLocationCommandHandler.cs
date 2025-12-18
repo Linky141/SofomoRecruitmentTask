@@ -21,7 +21,7 @@ public class AddLocationCommandHandler : IRequestHandler<AddLocationCommand, Add
         _weatherApi = weatherApi;
     }
 
-   public async Task<AddLocationResponseDto> Handle(AddLocationCommand request, CancellationToken cancellationToken)
+    public async Task<AddLocationResponseDto> Handle(AddLocationCommand request, CancellationToken cancellationToken)
     {
         if (request.Latitude < -90 || request.Latitude > 90)
             throw new ArgumentOutOfRangeException(nameof(request.Latitude), "Latitude must be between -90 and 90.");
@@ -29,19 +29,24 @@ public class AddLocationCommandHandler : IRequestHandler<AddLocationCommand, Add
         if (request.Longitude < -180 || request.Longitude > 180)
             throw new ArgumentOutOfRangeException(nameof(request.Longitude), "Longitude must be between -180 and 180.");
 
-        var location = new Location
-        {
-            Latitude = request.Latitude,
-            Longitude = request.Longitude
-        };
+        var location = await _locationRepo.GetByCoordinatesAsync(request.Latitude, request.Longitude);
 
-        try
+        if (location == null)
         {
-            await _locationRepo.AddAsync(location);
-        }
-        catch (Exception ex)
-        {
-            throw new InvalidOperationException("Unable to add location to database.", ex);
+            location = new Location
+            {
+                Latitude = request.Latitude,
+                Longitude = request.Longitude
+            };
+
+            try
+            {
+                await _locationRepo.AddAsync(location);
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException("Unable to add location to database.", ex);
+            }
         }
 
         double temperature;

@@ -8,4 +8,5 @@ public interface ILocationRepository
     Task DeleteAsync(int id);
     Task<Location?> GetByIdAsync(int id);
     Task<IEnumerable<Location>> GetAllAsync();
+    Task<Location?> GetByCoordinatesAsync(double latitude, double longitude);
 }

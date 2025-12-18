@@ -17,7 +17,7 @@ public class GetForecastByLocationIdQueryHandler : IRequestHandler<GetForecastBy
         _locationRepo = locationRepo;
     }
 
-    public async Task<ForecastResponseDto> Handle(GetForecastByLocationIdQuery request, CancellationToken cancellationToken)
+  public async Task<ForecastResponseDto> Handle(GetForecastByLocationIdQuery request, CancellationToken cancellationToken)
     {
         var location = await _locationRepo.GetByIdAsync(request.Id);
         if (location == null)

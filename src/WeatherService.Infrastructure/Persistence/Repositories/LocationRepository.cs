@@ -3,8 +3,6 @@ using WeatherService.Application.Interfaces;
 using WeatherService.Domain.Entities;
 using WeatherService.Infrastructure.Persistence;
 
-namespace WeatherService.Infrastructure.Repositories;
-
 public class LocationRepository : ILocationRepository
 {
     private readonly WeatherDbContext _context;
@@ -21,14 +19,9 @@ public class LocationRepository : ILocationRepository
         return location;
     }
 
-    public async Task DeleteAsync(int id)
+    public async Task<Location?> GetByIdAsync(int id)
     {
-        var entity = await _context.Locations.FindAsync(id);
-        if (entity != null)
-        {
-            _context.Locations.Remove(entity);
-            await _context.SaveChangesAsync();
-        }
+        return await _context.Locations.FindAsync(id);
     }
 
     public async Task<IEnumerable<Location>> GetAllAsync()
@@ -36,8 +29,19 @@ public class LocationRepository : ILocationRepository
         return await _context.Locations.ToListAsync();
     }
 
-    public async Task<Location?> GetByIdAsync(int id)
+    public async Task DeleteAsync(int id)
     {
-        return await _context.Locations.FindAsync(id);
+        var location = await _context.Locations.FindAsync(id);
+        if (location == null)
+            throw new KeyNotFoundException($"Location with id {id} not found.");
+
+        _context.Locations.Remove(location);
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task<Location?> GetByCoordinatesAsync(double latitude, double longitude)
+    {
+        return await _context.Locations
+            .FirstOrDefaultAsync(l => l.Latitude == latitude && l.Longitude == longitude);
     }
 }
