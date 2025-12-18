@@ -22,32 +22,60 @@ public class AddLocationCommandHandler : IRequestHandler<AddLocationCommand, Add
     }
 
    public async Task<AddLocationResponseDto> Handle(AddLocationCommand request, CancellationToken cancellationToken)
-{
-    var location = new Location
     {
-        Latitude = request.Latitude,
-        Longitude = request.Longitude
-    };
-    await _locationRepo.AddAsync(location);
+        if (request.Latitude < -90 || request.Latitude > 90)
+            throw new ArgumentOutOfRangeException(nameof(request.Latitude), "Latitude must be between -90 and 90.");
 
-    var temperature = await _weatherApi.GetTemperatureAsync(request.Latitude, request.Longitude);
+        if (request.Longitude < -180 || request.Longitude > 180)
+            throw new ArgumentOutOfRangeException(nameof(request.Longitude), "Longitude must be between -180 and 180.");
 
-    var weather = new WeatherForecast
-    {
-        LocationId = location.Id,
-        ForecastDate = DateTime.UtcNow, 
-        TemperatureC = temperature,     
-        Summary = request.Summary      
-    };
-    await _forecastRepo.AddAsync(weather);
+        var location = new Location
+        {
+            Latitude = request.Latitude,
+            Longitude = request.Longitude
+        };
 
-    return new AddLocationResponseDto(
-        location.Id,
-        location.Latitude,
-        location.Longitude,
-        weather.ForecastDate,
-        weather.TemperatureC,
-        weather.Summary
-    );
-}
+        try
+        {
+            await _locationRepo.AddAsync(location);
+        }
+        catch (Exception ex)
+        {
+            throw new InvalidOperationException("Unable to add location to database.", ex);
+        }
+
+        double temperature;
+        try
+        {
+            temperature = await _weatherApi.GetTemperatureAsync(request.Latitude, request.Longitude);
+        }
+        catch
+        {
+            temperature = 0;
+        }
+
+        var weather = new WeatherForecast
+        {
+            LocationId = location.Id,
+            ForecastDate = DateTime.UtcNow,
+            TemperatureC = temperature,
+        };
+
+        try
+        {
+            await _forecastRepo.AddAsync(weather);
+        }
+        catch (Exception ex)
+        {
+            throw new InvalidOperationException("Unable to add weather forecast to database.", ex);
+        }
+
+        return new AddLocationResponseDto(
+            location.Id,
+            location.Latitude,
+            location.Longitude,
+            weather.ForecastDate,
+            weather.TemperatureC
+        );
+    }
 }

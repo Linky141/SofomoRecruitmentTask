@@ -1,9 +1,10 @@
 using MediatR;
+using WeatherService.Application.Features.WeatherForecasts.Dtos;
 using WeatherService.Application.Interfaces;
 
 namespace WeatherService.Application.Features.WeatherForecasts.Commands.DeleteLocation;
 
-public class DeleteLocationCommandHandler : IRequestHandler<DeleteLocationCommand>
+public class DeleteLocationCommandHandler : IRequestHandler<DeleteLocationCommand, LocationDto>
 {
     private readonly ILocationRepository _locationRepo;
 
@@ -12,9 +13,14 @@ public class DeleteLocationCommandHandler : IRequestHandler<DeleteLocationComman
         _locationRepo = locationRepo;
     }
 
-    public async Task<Unit> Handle(DeleteLocationCommand request, CancellationToken cancellationToken)
+    public async Task<LocationDto> Handle(DeleteLocationCommand request, CancellationToken cancellationToken)
     {
+        var location = await _locationRepo.GetByIdAsync(request.Id);
+        if (location == null)
+            throw new KeyNotFoundException($"Location with ID {request.Id} was not found.");
+
         await _locationRepo.DeleteAsync(request.Id);
-        return Unit.Value;
+
+        return new LocationDto(location.Id, location.Latitude, location.Longitude);
     }
 }

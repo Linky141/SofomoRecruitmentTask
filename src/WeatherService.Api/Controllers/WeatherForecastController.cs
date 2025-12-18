@@ -21,28 +21,72 @@ public class WeatherController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> AddLocation([FromBody] AddLocationCommand command)
     {
-        var result = await _mediator.Send(command);
-        return Ok(result);
+        try
+        {
+            var result = await _mediator.Send(command);
+            return Ok(result);
+        }
+        catch (ArgumentOutOfRangeException ex)
+        {
+            return BadRequest(new { message = ex.Message });
+        }
+        catch (InvalidOperationException ex)
+        {
+            return StatusCode(500, new { message = ex.Message });
+        }
+        catch (Exception)
+        {
+            return StatusCode(500, new { message = "An unexpected error occurred." });
+        }
     }
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteLocation(int id)
     {
-        await _mediator.Send(new DeleteLocationCommand(id));
-        return NoContent();
+        try
+        {
+            var deletedLocation = await _mediator.Send(new DeleteLocationCommand(id));
+            return Ok(deletedLocation);
+        }
+        catch (KeyNotFoundException ex)
+        {
+            return NotFound(new { message = ex.Message });
+        }
+        catch (Exception)
+        {
+            return StatusCode(500, new { message = "An unexpected error occurred." });
+        }
     }
 
     [HttpGet("{id}")]
     public async Task<IActionResult> GetForecast(int id)
     {
-        var result = await _mediator.Send(new GetForecastByLocationIdQuery(id));
-        return Ok(result);
+        try
+        {
+            var result = await _mediator.Send(new GetForecastByLocationIdQuery(id));
+            return Ok(result);
+        }
+        catch (KeyNotFoundException ex)
+        {
+            return NotFound(new { message = ex.Message });
+        }
+        catch (Exception)
+        {
+            return StatusCode(500, new { message = "An unexpected error occurred." });
+        }
     }
 
     [HttpGet("locations")]
     public async Task<IActionResult> GetLocations()
     {
-        var result = await _mediator.Send(new GetAllLocationsQuery());
-        return Ok(result);
+        try
+        {
+            var result = await _mediator.Send(new GetAllLocationsQuery());
+            return Ok(result);
+        }
+        catch (Exception)
+        {
+            return StatusCode(500, new { message = "An unexpected error occurred while retrieving locations." });
+        }
     }
 }

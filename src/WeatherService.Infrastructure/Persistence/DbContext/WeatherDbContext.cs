@@ -26,7 +26,6 @@ public class WeatherDbContext : DbContext
 
             entity.Property(e => e.ForecastDate).IsRequired();
             entity.Property(e => e.TemperatureC).IsRequired();
-            entity.Property(e => e.Summary).HasMaxLength(200);
         });
 
         modelBuilder.Entity<Location>(entity =>

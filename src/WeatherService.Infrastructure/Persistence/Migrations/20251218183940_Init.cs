@@ -33,8 +33,7 @@ namespace WeatherService.Infrastructure.Persistence.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     LocationId = table.Column<int>(type: "INTEGER", nullable: false),
                     ForecastDate = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    TemperatureC = table.Column<double>(type: "REAL", nullable: false),
-                    Summary = table.Column<string>(type: "TEXT", maxLength: 200, nullable: false)
+                    TemperatureC = table.Column<double>(type: "REAL", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -7,6 +7,5 @@ public interface IWeatherApiService
 
 public record WeatherApiForecastDto(
     DateTime ForecastDate,
-    double TemperatureC,
-    string Summary
+    double TemperatureC
 );

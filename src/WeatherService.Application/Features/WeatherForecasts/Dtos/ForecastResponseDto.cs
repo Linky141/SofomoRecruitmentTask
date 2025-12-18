@@ -5,6 +5,5 @@ public record ForecastResponseDto(
     double Latitude,
     double Longitude,
     DateTime ForecastDate,
-    double TemperatureC,
-    string Summary
+    double TemperatureC
 );

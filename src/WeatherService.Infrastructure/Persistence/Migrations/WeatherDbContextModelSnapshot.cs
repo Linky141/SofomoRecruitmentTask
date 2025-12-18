@@ -46,11 +46,6 @@ namespace WeatherService.Infrastructure.Persistence.Migrations
                     b.Property<int>("LocationId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Summary")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("TEXT");
-
                     b.Property<double>("TemperatureC")
                         .HasColumnType("REAL");
 

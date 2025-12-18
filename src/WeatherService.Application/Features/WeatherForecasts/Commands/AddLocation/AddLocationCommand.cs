@@ -5,6 +5,5 @@ namespace WeatherService.Application.Features.WeatherForecasts.Commands.AddLocat
 
 public record AddLocationCommand(
     double Latitude,
-    double Longitude,
-    string Summary
+    double Longitude
 ) : IRequest<AddLocationResponseDto>;

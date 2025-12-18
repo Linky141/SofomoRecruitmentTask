@@ -11,7 +11,7 @@ using WeatherService.Infrastructure.Persistence;
 namespace WeatherService.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(WeatherDbContext))]
-    [Migration("20251218175101_Init")]
+    [Migration("20251218183940_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -48,11 +48,6 @@ namespace WeatherService.Infrastructure.Persistence.Migrations
 
                     b.Property<int>("LocationId")
                         .HasColumnType("INTEGER");
-
-                    b.Property<string>("Summary")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("TEXT");
 
                     b.Property<double>("TemperatureC")
                         .HasColumnType("REAL");
