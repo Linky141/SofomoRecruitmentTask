@@ -8,11 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="10.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.9" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\WeatherService.Application\WeatherService.Application.csproj" />
-    <ProjectReference Include="..\WeatherService.Infrastructure\WeatherService.Infrastructure.csproj" />
+    <ProjectReference
+      Include="..\WeatherService.Infrastructure\WeatherService.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
