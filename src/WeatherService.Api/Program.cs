@@ -1,9 +1,13 @@
-using Microsoft.OpenApi;
 using WeatherService.Application;
+using WeatherService.Infrastructure;
+using Microsoft.OpenApi;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddApplication();
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddInfrastructure(connectionString);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
@@ -12,7 +16,7 @@ builder.Services.AddSwaggerGen(c =>
     {
         Title = "WeatherService API",
         Version = "v1",
-        Description = "API do pobierania prognozy pogody"
+        Description = "Weather Forecast Service API"
     });
 });
 
