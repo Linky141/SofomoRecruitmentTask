@@ -7,17 +7,34 @@ using WeatherService.Application.Features.WeatherForecasts.ueries.GetForecastByL
 
 namespace WeatherService.Api.Controllers;
 
+/// <summary>
+/// Controller responsible for handling weather-related operations such as adding, deleting locations 
+/// and retrieving weather forecasts.
+/// </summary>
 [ApiController]
 [Route("weather")]
 public class WeatherController : ControllerBase
 {
     private readonly IMediator _mediator;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="WeatherController"/> class.
+    /// </summary>
+    /// <param name="mediator">The mediator instance for handling commands and queries.</param>
     public WeatherController(IMediator mediator)
     {
         _mediator = mediator;
     }
 
+    /// <summary>
+    /// Adds a new location.
+    /// </summary>
+    /// <param name="command">AddLocationCommand data.</param>
+    /// <returns>
+    /// Returns 200 OK with the added location result if successful, 
+    /// 400 Bad Request if the input is invalid,
+    /// 500 Internal Server Error for other exceptions.
+    /// </returns>
     [HttpPost]
     public async Task<IActionResult> AddLocation([FromBody] AddLocationCommand command)
     {
@@ -40,6 +57,15 @@ public class WeatherController : ControllerBase
         }
     }
 
+    /// <summary>
+    /// Deletes an existing location by ID.
+    /// </summary>
+    /// <param name="id">The ID of the location to delete.</param>
+    /// <returns>
+    /// Returns 200 OK with deleted location info if successful,
+    /// 404 Not Found if the location does not exist,
+    /// 500 Internal Server Error for other exceptions.
+    /// </returns>
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteLocation(int id)
     {
@@ -58,6 +84,15 @@ public class WeatherController : ControllerBase
         }
     }
 
+    /// <summary>
+    /// Retrieves the weather forecast for a given location ID.
+    /// </summary>
+    /// <param name="id">The ID of the location.</param>
+    /// <returns>
+    /// Returns 200 OK with the forecast if found,
+    /// 404 Not Found if the location does not exist,
+    /// 500 Internal Server Error for other exceptions.
+    /// </returns>
     [HttpGet("{id}")]
     public async Task<IActionResult> GetForecast(int id)
     {
@@ -76,6 +111,13 @@ public class WeatherController : ControllerBase
         }
     }
 
+    /// <summary>
+    /// Retrieves all available locations.
+    /// </summary>
+    /// <returns>
+    /// Returns 200 OK with the list of locations if successful,
+    /// 500 Internal Server Error for exceptions.
+    /// </returns>
     [HttpGet("locations")]
     public async Task<IActionResult> GetLocations()
     {
