@@ -32,3 +32,6 @@
 *.nupkg
 *.snupkg
 packages/
+
+# macOS
+.DS_Store
