@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7YpVm1qhZzA=",
+  "dgSpecHash": "7UPLyeGXbaU=",
   "success": true,
-  "projectFilePath": "/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Api/WeatherService.Api.csproj",
+  "projectFilePath": "/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.API/WeatherService.API.csproj",
   "expectedPackageFiles": [
     "/Users/tomaszbielas/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/tomaszbielas/.nuget/packages/mediatr/11.1.0/mediatr.11.1.0.nupkg.sha512",

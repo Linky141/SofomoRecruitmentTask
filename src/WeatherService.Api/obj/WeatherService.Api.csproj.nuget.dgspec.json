@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Api/WeatherService.Api.csproj": {}
+    "/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.API/WeatherService.API.csproj": {}
   },
   "projects": {
-    "/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Api/WeatherService.Api.csproj": {
+    "/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.API/WeatherService.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Api/WeatherService.Api.csproj",
-        "projectName": "WeatherService.Api",
-        "projectPath": "/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Api/WeatherService.Api.csproj",
+        "projectUniqueName": "/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.API/WeatherService.API.csproj",
+        "projectName": "WeatherService.API",
+        "projectPath": "/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.API/WeatherService.API.csproj",
         "packagesPath": "/Users/tomaszbielas/.nuget/packages/",
-        "outputPath": "/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Api/obj/",
+        "outputPath": "/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/tomaszbielas/.nuget/NuGet/NuGet.Config"

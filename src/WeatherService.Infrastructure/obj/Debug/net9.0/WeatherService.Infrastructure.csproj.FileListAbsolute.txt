@@ -1,9 +1,3 @@
-/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Infrastructure/obj/Debug/net9.0/WeatherService.Infrastructure.csproj.AssemblyReference.cache
-/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Infrastructure/obj/Debug/net9.0/WeatherService.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Infrastructure/obj/Debug/net9.0/WeatherService.Infrastructure.AssemblyInfoInputs.cache
-/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Infrastructure/obj/Debug/net9.0/WeatherService.Infrastructure.AssemblyInfo.cs
-/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Infrastructure/obj/Debug/net9.0/WeatherService.Infrastructure.csproj.CoreCompileInputs.cache
-/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Infrastructure/obj/Debug/net9.0/WeatherService.Infrastructure.sourcelink.json
 /Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Infrastructure/bin/Debug/net9.0/WeatherService.Infrastructure.deps.json
 /Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Infrastructure/bin/Debug/net9.0/WeatherService.Infrastructure.runtimeconfig.json
 /Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Infrastructure/bin/Debug/net9.0/WeatherService.Infrastructure.dll
@@ -12,6 +6,12 @@
 /Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Infrastructure/bin/Debug/net9.0/WeatherService.Domain.dll
 /Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Infrastructure/bin/Debug/net9.0/WeatherService.Application.pdb
 /Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Infrastructure/bin/Debug/net9.0/WeatherService.Domain.pdb
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Infrastructure/obj/Debug/net9.0/WeatherService.Infrastructure.csproj.AssemblyReference.cache
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Infrastructure/obj/Debug/net9.0/WeatherService.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Infrastructure/obj/Debug/net9.0/WeatherService.Infrastructure.AssemblyInfoInputs.cache
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Infrastructure/obj/Debug/net9.0/WeatherService.Infrastructure.AssemblyInfo.cs
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Infrastructure/obj/Debug/net9.0/WeatherService.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Infrastructure/obj/Debug/net9.0/WeatherService.Infrastructure.sourcelink.json
 /Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Infrastructure/obj/Debug/net9.0/WeatherS.7C4A1968.Up2Date
 /Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Infrastructure/obj/Debug/net9.0/WeatherService.Infrastructure.dll
 /Users/tomaszbielas/Documents/Code/SofomoRecruitmentTask/src/WeatherService.Infrastructure/obj/Debug/net9.0/refint/WeatherService.Infrastructure.dll
