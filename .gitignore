@@ -1,6 +1,14 @@
-# Build Folders
-bin/
-obj/
+# Build directories
+**/bin/
+**/obj/
+
+# Test results
+**/TestResults/
+
+# VS/IDE files (opcjonalnie)
+.vs/
+*.user
+*.suo
 
 # User-specific files
 *.user
@@ -17,8 +25,8 @@ obj/
 # Logs
 *.log
 
-# Test result folders
-TestResults/
+# Test results
+**/TestResults/
 
 # NuGet
 *.nupkg
