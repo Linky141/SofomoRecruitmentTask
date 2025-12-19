@@ -1,6 +1,0 @@
-{
-  "WeatherService.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/tomaszbielas\/Documents\/Code\/SofomoRecruitmentTask\/src\/WeatherService.API",
-  "WeatherService.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/tomaszbielas\/Documents\/Code\/SofomoRecruitmentTask\/src\/WeatherService.Application",
-  "WeatherService.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/tomaszbielas\/Documents\/Code\/SofomoRecruitmentTask\/src\/WeatherService.Domain",
-  "WeatherService.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/tomaszbielas\/Documents\/Code\/SofomoRecruitmentTask\/src\/WeatherService.Infrastructure"
-}
