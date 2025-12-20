@@ -3,6 +3,8 @@ using Microsoft.OpenApi;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.WebHost.UseUrls("http://0.0.0.0:8080");
+
 builder.Services.AddApplication();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -24,7 +26,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "WeatherService API V1");
-        c.RoutePrefix = string.Empty; 
+        c.RoutePrefix = "swagger"; 
     });
 }
 

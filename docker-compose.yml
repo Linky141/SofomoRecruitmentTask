@@ -1,0 +1,12 @@
+services:
+  weather-api:
+    build:
+      context: ./src
+      dockerfile: WeatherService.Api/Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: "http://0.0.0.0:8080"
+    volumes:
+      - ./src/WeatherService.Api/appsettings.json:/app/appsettings.json:ro
