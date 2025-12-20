@@ -1,0 +1,39 @@
+# flyctl launch added from .gitignore
+# Build directories
+**/**/bin
+**/**/obj
+
+# Test results
+**/**/TestResults
+
+# VS/IDE files (opcjonalnie)
+**/.vs
+**/*.user
+**/*.suo
+
+# User-specific files
+**/*.user
+**/*.suo
+**/*.userosscache
+**/*.sln.docstates
+
+# Visual Studio Code
+**/.vscode
+
+# Rider
+**/.idea
+
+# Logs
+**/*.log
+
+# Test results
+**/**/TestResults
+
+# NuGet
+**/*.nupkg
+**/*.snupkg
+**/packages
+
+# macOS
+**/.DS_Store
+fly.toml
