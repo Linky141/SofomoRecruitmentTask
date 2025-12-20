@@ -8,5 +8,20 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_URLS: "http://0.0.0.0:8080"
+      ConnectionStrings__DefaultConnection: "Host=weather-db;Port=5432;Database=weatherdb;Username=postgres;Password=postgres"
+    depends_on:
+      - weather-db
+
+  weather-db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: weatherdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
     volumes:
-      - ./src/WeatherService.Api/appsettings.json:/app/appsettings.json:ro
+      - weather-db-data:/var/lib/postgresql/data
+
+volumes:
+  weather-db-data:

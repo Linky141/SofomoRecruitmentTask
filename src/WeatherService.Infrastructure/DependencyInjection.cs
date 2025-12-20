@@ -11,16 +11,18 @@ using WeatherService.Infrastructure.Repositories;
 public static class DependencyInjection
 {
     /// <summary>
-    /// Registers infrastructure services such as EF Core database context,
-    /// repositories, and HTTP client services into the application's dependency injection container.
+    /// Configures and registers the infrastructure layer services into the application's 
+    /// dependency injection container. This includes the EF Core PostgreSQL database context,
+    /// repository implementations for locations and weather forecasts, and the HTTP client service
+    /// for fetching external weather data.
     /// </summary>
     /// <param name="services">The application's dependency injection container.</param>
-    /// <param name="connectionString">The database connection string used to configure EF Core.</param>
-    /// <returns>The updated <see cref="IServiceCollection"/> instance.</returns>
+    /// <param name="connectionString">The PostgreSQL database connection string used to configure EF Core.</param>
+    /// <returns>The updated <see cref="IServiceCollection"/> instance with infrastructure services registered.</returns>
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, string connectionString)
     {
         services.AddDbContext<WeatherDbContext>(options =>
-            options.UseSqlite(connectionString));
+            options.UseNpgsql(connectionString));
 
         services.AddHttpClient<IWeatherApiService, WeatherApiService>();
 
